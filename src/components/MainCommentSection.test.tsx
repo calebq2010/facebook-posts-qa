@@ -3,7 +3,7 @@ import { MainCommentSection } from "./MainCommentSection"
 
 test('renders learn react link', () => {
   render(<MainCommentSection />)
-  const mainSectionText = screen.getByText('Hello World')
+  const commentElement = screen.getByText('This is a Comment Component')
   
-  expect(mainSectionText).toBeInTheDocument()
+  expect(commentElement).toBeInTheDocument()
 });

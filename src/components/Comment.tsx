@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Comment = () => {
   return (
-    <div>
+    <div className='comment'>
       This is a Comment Component
     </div>
   )
