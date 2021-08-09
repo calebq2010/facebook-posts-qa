@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { MainCommentSection } from "./MainCommentSection"
+import { Comment } from "./Comment"
 
 test('renders learn react link', () => {
-  render(<MainCommentSection />)
-  const mainSectionText = screen.getByText('Hello World')
+  render(<Comment />)
+  const mainSectionText = screen.getByText('This is a Comment Component')
   
   expect(mainSectionText).toBeInTheDocument()
 });
