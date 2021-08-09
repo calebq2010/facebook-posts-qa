@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainCommentSection } from './MainCommentSection';
+import { MainCommentSection } from './components/MainCommentSection';
 
 function App() {
   return (

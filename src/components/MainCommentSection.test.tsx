@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MainCommentSection } from "/Users/caleb/Desktop/Dev/facebook-posts/src/MainCommentSection"
+import { MainCommentSection } from "./MainCommentSection"
 
 test('renders learn react link', () => {
   render(<MainCommentSection />)
