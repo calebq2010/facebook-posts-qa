@@ -1,13 +1,10 @@
 import React from 'react';
+import { MainCommentSection } from './MainCommentSection';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello World!
-        </p>
-      </header>
+      <MainCommentSection />
     </div>
   );
 }
