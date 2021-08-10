@@ -1,10 +1,10 @@
 import React from 'react';
-import { Comment } from './Comment'
+import { PostComment } from './PostComment'
 
 export const MainCommentSection = () => {
   return (
     <div className='d-flex justify-content-center'>
-      <Comment />
+      <PostComment />
     </div>
   )
 }
