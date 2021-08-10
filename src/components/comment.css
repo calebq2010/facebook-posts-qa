@@ -5,12 +5,18 @@
   border-radius: 5px;
 }
 
+.comment-section-upper {
+  padding-bottom: 50px;
+}
+
 .comment-section-lower {
   border-top: 2px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .profile-picture {
-  padding: 5px;
+  margin-top: 10px;
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -22,7 +28,7 @@
 }
 
 .text-box {
-  padding: 5px;
+  margin-top: 10px;
   border: none;
   outline: none;
 }
