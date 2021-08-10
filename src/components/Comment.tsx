@@ -1,9 +1,11 @@
 import React from 'react';
+import './comment.css'
 
 export const Comment = () => {
   return (
     <div className='comment'>
-      This is a Comment Component
+      <p>This is a test</p>
+      <p>This is a test</p>
     </div>
   )
 }

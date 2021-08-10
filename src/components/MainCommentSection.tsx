@@ -3,7 +3,7 @@ import { Comment } from './Comment'
 
 export const MainCommentSection = () => {
   return (
-    <div>
+    <div className='d-flex justify-content-center'>
       <Comment />
     </div>
   )
