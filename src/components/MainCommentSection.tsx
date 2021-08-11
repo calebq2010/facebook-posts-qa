@@ -3,7 +3,7 @@ import { PostComment } from './PostComment'
 
 export const MainCommentSection = () => {
   return (
-    <div className='d-flex justify-content-center'>
+    <div data-testid='main-comment-component'className='d-flex justify-content-center'>
       <PostComment />
     </div>
   )
