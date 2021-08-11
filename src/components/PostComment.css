@@ -5,11 +5,11 @@
   border-radius: 5px;
 }
 
-.comment-section-upper {
+.post-comment-section-upper {
   padding-bottom: 50px;
 }
 
-.comment-section-lower {
+.post-comment-section-lower {
   border-top: 2px solid lightgray;
   padding-top: 10px;
   padding-bottom: 10px;
