@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { MainPostSection } from "./MainPostSection"
 
-test('renders learn react link', () => {
+test('renders main section header', () => {
   render(<MainPostSection />)
-  const mainCommentElement = screen.getByTestId('main-post-component')
+
+  const mainPostSection = screen.getByTestId('main-post-section')
   
-  expect(mainCommentElement).toBeInTheDocument()
+  expect(mainPostSection).toBeInTheDocument()
 });

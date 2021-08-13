@@ -8,7 +8,7 @@ export const MainPostSection = () => {
   const textChangedEvent = (event: React.ChangeEvent<HTMLInputElement>) => setTextValue(event.target.value)
 
   return (
-    <MainSection>
+    <MainSection data-testid='main-post-section'>
       <MainForm>
         <MainInputSection>
           <MainProfilePicture src={ profilePicture } alt='profile' />
