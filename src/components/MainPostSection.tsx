@@ -11,8 +11,9 @@ export const MainPostSection = () => {
     <MainSection data-testid='main-post-section'>
       <MainForm>
         <MainInputSection>
-          <MainProfilePicture src={ profilePicture } alt='profile' />
+          <MainProfilePicture data-testid='profile-picture' src={ profilePicture } alt='profile' />
           <MainPostInput
+            data-testid='text-input'
             type='text'
             placeholder='What is on your mind?'
             id='postText'
@@ -20,9 +21,9 @@ export const MainPostSection = () => {
             onChange={ textChangedEvent }>
           </MainPostInput>
         </MainInputSection>
-        <SectionDivider></SectionDivider>
-        <PostItSection>
-          <PostItButton type='button'>Post It</PostItButton>
+        <SectionDivider data-testid='divider'></SectionDivider>
+        <PostItSection data-testid='post-btn-section'>
+          <PostItButton data-testid='post-btn' type='button'>Post It</PostItButton>
         </PostItSection>
       </MainForm>
     </MainSection>
