@@ -1,10 +1,9 @@
-import React from 'react';
-import { MainCommentSection } from './components/MainCommentSection';
+import { MainPostSection } from './components/MainPostSection';
 
 function App() {
   return (
     <div className="App">
-      <MainCommentSection />
+      <MainPostSection />
     </div>
   );
 }
