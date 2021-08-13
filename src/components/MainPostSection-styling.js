@@ -11,7 +11,7 @@ export const MainForm = styled.form`
 `
 
 export const MainProfilePicture = styled.img`
-    width: 50px;
+    width: 40px;
     border-radius: 50%;
 `
 
@@ -25,8 +25,9 @@ export const MainInputSection = styled.div`
 
 export const MainPostInput = styled.input`
   border: none;
-  margin-left: 20px;
-  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
   &:focus {
       outline: none;
     }
