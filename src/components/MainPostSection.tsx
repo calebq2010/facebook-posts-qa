@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm } from './MainPostSection-styling'
+import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm, PostItButton, PostItSection, SectionDivider } from './MainPostSection-styling'
 import profilePicture from '../photos/caleb_quinn.png'
 
 export const MainPostSection = () => {
@@ -20,6 +20,10 @@ export const MainPostSection = () => {
             onChange={ textChangedEvent }>
           </MainPostInput>
         </MainInputSection>
+        <SectionDivider></SectionDivider>
+        <PostItSection>
+          <PostItButton type='button'>Post It</PostItButton>
+        </PostItSection>
       </MainForm>
     </MainSection>
   )

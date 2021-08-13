@@ -32,3 +32,28 @@ export const MainPostInput = styled.input`
       outline: none;
     }
 `
+
+export const SectionDivider = styled.hr`
+  border-top: 1px solid gray
+`
+
+export const PostItSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 5px 20px 15px 20px;
+`
+
+export const PostItButton = styled.button`
+  background: #8FB1F7;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: .5em;
+  padding: 5px;
+  width: 75px;
+  
+  &:focus {
+      outline: none;
+    }
+`
