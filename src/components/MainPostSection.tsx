@@ -1,9 +1,17 @@
-import { PostComment } from './PostComment'
+import { useState } from 'react'
+import { MainProfilePicture, MainInputSection, MainSection, MainForm } from './MainPostSection-styling'
+import profilePicture from '../photos/caleb_quinn.png'
 
 export const MainPostSection = () => {
+  const [textValue, setTextValue] = useState("")
+
   return (
-    <div data-testid='main-post-component'className='d-flex justify-content-center'>
-      <PostComment />
-    </div>
+    <MainSection>
+      <MainForm>
+        <MainInputSection>
+          <MainProfilePicture src={profilePicture} alt='profile' />
+        </MainInputSection>
+      </MainForm>
+    </MainSection>
   )
 }

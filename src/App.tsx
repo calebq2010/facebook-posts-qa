@@ -1,9 +1,12 @@
+import './App.css'
 import { MainPostSection } from './components/MainPostSection';
 
 function App() {
   return (
     <div className="App">
-      <MainPostSection />
+      <div className="main-post-header">
+        <MainPostSection />
+      </div>
     </div>
   );
 }
