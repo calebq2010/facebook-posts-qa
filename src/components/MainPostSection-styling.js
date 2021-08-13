@@ -22,3 +22,12 @@ export const MainInputSection = styled.div`
     align-items: center;
     padding: 20px;
 `
+
+export const MainPostInput = styled.input`
+  border: none;
+  margin-left: 20px;
+  font-size: 18px;
+  &:focus {
+      outline: none;
+    }
+`
