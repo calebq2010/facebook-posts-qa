@@ -21,11 +21,6 @@ function App() {
       <div className="main-post-header">
         <MainPostSection addPost={onAddPost} />
         <ListOfPosts posts={posts} />
-        <ul>
-          {posts.map((post) => {
-            return <li key={post}>{post}</li>
-          })}
-        </ul>
       </div>
     </div>
   );
