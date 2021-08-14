@@ -13,8 +13,10 @@ export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) =>
   const onEnterKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {event.key === 'Enter' && event.preventDefault()}
 
   const onPostItClick = () => {
-   addPost(textValue)
-   setTextValue("")
+    if(textValue){
+      addPost(textValue)
+      setTextValue("")
+    }
   }
 
   return (
