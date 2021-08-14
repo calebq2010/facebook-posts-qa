@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { MainPostSection } from "./MainPostSection"
 
+const addPostStub = () => {}
+
 test('renders main section header', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const mainPostSection = screen.getByTestId('main-post-section')
   
@@ -10,7 +12,7 @@ test('renders main section header', () => {
 });
 
 test('renders profile picture', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const profilePicture = screen.getByTestId('profile-picture')
   
@@ -18,7 +20,7 @@ test('renders profile picture', () => {
 });
 
 test('renders the text input box', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const textInput = screen.getByTestId('text-input')
   
@@ -26,7 +28,7 @@ test('renders the text input box', () => {
 });
 
 test('renders the divider', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const sectionDivider = screen.getByTestId('divider')
   
@@ -34,7 +36,7 @@ test('renders the divider', () => {
 });
 
 test('renders the post button section', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const postButtonSection = screen.getByTestId('post-btn-section')
   
@@ -42,7 +44,7 @@ test('renders the post button section', () => {
 });
 
 test('renders the post button', () => {
-  render(<MainPostSection />)
+  render(<MainPostSection addPost={addPostStub} />)
 
   const postButton = screen.getByTestId('post-btn')
   

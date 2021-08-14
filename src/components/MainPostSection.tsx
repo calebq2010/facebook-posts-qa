@@ -3,16 +3,16 @@ import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainF
 import profilePicture from '../photos/caleb_quinn.png'
 
 type MainPostProps = {
-  addPost?: (text: string) => {},
+  addPost: (text: string) => {} | void,
 }
 
-export const MainPostSection:FC<MainPostProps> = (props: MainPostProps) => {
+export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) => {
   const [textValue, setTextValue] = useState("")
 
   const textChangedEvent = (event: React.ChangeEvent<HTMLInputElement>) => setTextValue(event.target.value)
 
   const onPostItClick = () => {
-   props.addPost && props.addPost(textValue)
+   addPost(textValue)
    setTextValue("")
   }
 

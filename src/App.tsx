@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="main-post-header">
-        <MainPostSection />
+        <MainPostSection addPost={alert} />
       </div>
     </div>
   );
