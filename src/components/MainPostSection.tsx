@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, FC } from 'react'
 import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm, PostItButton, PostItSection, SectionDivider } from './MainPostSection-styling'
 import profilePicture from '../photos/caleb_quinn.png'
 
-export const MainPostSection = () => {
+type MainPostProps = {
+  addPost?: (text: string) => {},
+}
+
+export const MainPostSection:FC<MainPostProps> = (props: MainPostProps) => {
   const [textValue, setTextValue] = useState("")
 
   const textChangedEvent = (event: React.ChangeEvent<HTMLInputElement>) => setTextValue(event.target.value)
+
+  const onPostItClick = () => {
+   props.addPost && props.addPost(textValue)
+   setTextValue("")
+  }
 
   return (
     <MainSection data-testid='main-post-section'>
@@ -23,7 +32,7 @@ export const MainPostSection = () => {
         </MainInputSection>
         <SectionDivider data-testid='divider'></SectionDivider>
         <PostItSection data-testid='post-btn-section'>
-          <PostItButton data-testid='post-btn' type='button'>Post It</PostItButton>
+          <PostItButton data-testid='post-btn' type='button' onClick={ onPostItClick }>Post It</PostItButton>
         </PostItSection>
       </MainForm>
     </MainSection>
