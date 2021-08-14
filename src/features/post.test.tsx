@@ -68,3 +68,12 @@ test('renders the users location', () => {
   expect(userLocation).toBeInTheDocument()
   expect(userLocation).toHaveTextContent('OH, USA')
 });
+
+test('renders the post time', () => {
+  render(<Post post={post} />)
+
+  const postedTime = screen.getByTestId('posted-time')
+  
+  expect(postedTime).toBeInTheDocument()
+  expect(postedTime).toHaveTextContent('1 minute ago')
+});

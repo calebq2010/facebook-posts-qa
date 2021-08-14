@@ -44,3 +44,8 @@ export const UserLocation = styled.div`
     margin-left: 5px;
     font-weight: bold;
 `
+
+export const Time = styled.span`
+    font-size: 10px;
+    color: #8494AB;
+`
