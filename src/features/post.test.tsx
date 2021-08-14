@@ -43,3 +43,28 @@ test('renders profile user name', () => {
   expect(profileUserName).toBeInTheDocument()
   expect(profileUserName).toHaveTextContent('Caleb Quinn')
 });
+
+test('renders location section', () => {
+  render(<Post post={post} />)
+
+  const locationSection = screen.getByTestId('location-section')
+  
+  expect(locationSection).toBeInTheDocument()
+});
+
+test('renders map marker icon', () => {
+  render(<Post post={post} />)
+
+  const mapMarker = screen.getByTestId('map-marker')
+  
+  expect(mapMarker).toBeInTheDocument()
+});
+
+test('renders the users location', () => {
+  render(<Post post={post} />)
+
+  const userLocation = screen.getByTestId('user-location')
+  
+  expect(userLocation).toBeInTheDocument()
+  expect(userLocation).toHaveTextContent('OH, USA')
+});

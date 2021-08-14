@@ -10,6 +10,13 @@ export const UserDisplayInfo = styled.div`
     padding: 20px 20px 10px 20px;
 `
 
+export const ProfileSection = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+`
+
 export const Profile = styled.div`
     display: flex;
     flex-direction: column;
@@ -31,4 +38,9 @@ export const ProfileName = styled.div`
 export const Location = styled.div`
     color: #5286F2;
     font-size: 12px;
+`
+
+export const UserLocation = styled.div`
+    margin-left: 5px;
+    font-weight: bold;
 `
