@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { Content, DotDivider, LikeCommentSection, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation } from './post-styling'
 import profilePicture from '../../photos/caleb_quinn.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

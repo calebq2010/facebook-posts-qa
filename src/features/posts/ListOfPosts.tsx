@@ -1,3 +1,4 @@
+import React from 'react';
 import { FC } from 'react'
 import { PostsList } from './ListOfPosts-styling'
 import { Post } from './post'

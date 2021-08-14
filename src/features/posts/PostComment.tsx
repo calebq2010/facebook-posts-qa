@@ -1,8 +1,8 @@
-
+import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './PostComment.css'
 
-export const PostComment = () => {
+export const PostComment = (): JSX.Element => {
   return (
     <Container data-testid='post-comment-main' className='comment'>
       <Row className='post-comment-section-upper'>
