@@ -1,7 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { createStore } from 'react-redux'
+import { postsReducer } from '../features/posts/postsReducer';
 
-export default configureStore({
-  reducer: {
-    posts: ''
-  },
-});
+export const store = createStore(postsReducer)
