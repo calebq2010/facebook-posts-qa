@@ -77,3 +77,12 @@ test('renders the post time', () => {
   expect(postedTime).toBeInTheDocument()
   expect(postedTime).toHaveTextContent('1 minute ago')
 });
+
+test('renders the post text', () => {
+  render(<Post post={post} />)
+
+  const postValue = screen.getByTestId('post-value')
+  
+  expect(postValue).toBeInTheDocument()
+  expect(postValue).toHaveTextContent('This is what is on my mind and a post value')
+});

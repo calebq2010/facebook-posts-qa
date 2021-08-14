@@ -51,3 +51,7 @@ export const Time = styled.span`
     font-size: 10px;
     color: #8494AB;
 `
+
+export const Content = styled.p`
+    font-size: 15px;
+`
