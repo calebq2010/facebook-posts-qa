@@ -10,10 +10,13 @@ export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) =>
   const [textValue, setTextValue] = useState("")
 
   const textChangedEvent = (event: React.ChangeEvent<HTMLInputElement>) => setTextValue(event.target.value)
+  const onEnterKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {event.key === 'Enter' && event.preventDefault()}
 
   const onPostItClick = () => {
-   addPost(textValue)
-   setTextValue("")
+    if(textValue){
+      addPost(textValue)
+      setTextValue("")
+    }
   }
 
   return (
@@ -27,6 +30,7 @@ export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) =>
             placeholder='What is on your mind?'
             id='postText'
             value={textValue}
+            onKeyDown={ onEnterKeyPressed }
             onChange={ textChangedEvent }>
           </MainPostInput>
         </MainInputSection>
