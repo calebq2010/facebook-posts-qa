@@ -1,7 +1,8 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MainPostSection } from "./MainPostSection"
 
-const addPostStub = () => {}
+const addPostStub = () => { "" }
 
 test('renders main section header', () => {
   render(<MainPostSection addPost={addPostStub} />)

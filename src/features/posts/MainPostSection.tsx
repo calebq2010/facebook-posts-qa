@@ -3,7 +3,7 @@ import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainF
 import profilePicture from '../../photos/caleb_quinn.png'
 
 type MainPostProps = {
-  addPost: (text: string) => {} | void,
+  addPost: (text: string) => Record<string, never> | void,
 }
 
 export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) => {
