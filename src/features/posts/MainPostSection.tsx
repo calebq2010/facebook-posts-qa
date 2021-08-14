@@ -1,6 +1,6 @@
 import React, { useState, FC } from 'react'
 import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm, PostItButton, PostItSection, SectionDivider } from './MainPostSection-styling'
-import profilePicture from '../photos/caleb_quinn.png'
+import profilePicture from '../../photos/caleb_quinn.png'
 
 type MainPostProps = {
   addPost: (text: string) => {} | void,

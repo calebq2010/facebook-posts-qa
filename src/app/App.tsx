@@ -1,5 +1,5 @@
 import './App.css'
-import { MainPostSection } from '../components/MainPostSection';
+import { MainPostSection } from '../features/posts/MainPostSection';
 
 function App() {
   return (
