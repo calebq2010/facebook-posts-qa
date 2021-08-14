@@ -53,5 +53,17 @@ export const Time = styled.span`
 `
 
 export const Content = styled.p`
+    margin-top: 10px;
     font-size: 15px;
+`
+
+export const LikeCommentSection = styled.div`
+    color: #979AA8;
+    font-size: 12px;
+`
+
+export const DotDivider = styled.span`
+    font-weight: 900;
+    margin-right: 5px;
+    margin-left: 5px;
 `

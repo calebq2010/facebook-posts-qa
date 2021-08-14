@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Content, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation } from './post-styling'
+import { Content, DotDivider, LikeCommentSection, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation } from './post-styling'
 import profilePicture from '../../photos/caleb_quinn.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
@@ -25,6 +25,11 @@ export const Post:FC<PostProps> = ({ post }: PostProps) => {
                 </Profile>
             </ProfileSection>
             <Content data-testid='post-value'>{post}</Content>
+            <LikeCommentSection>
+                <span data-testid='post-likes'>0 Likes</span>
+                    <DotDivider>&#183;</DotDivider>
+                <span data-testid='post-comments'>0 Comments</span>
+            </LikeCommentSection>
         </UserDisplayInfo>
     </PostItem>
   )

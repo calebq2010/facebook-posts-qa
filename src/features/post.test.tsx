@@ -86,3 +86,16 @@ test('renders the post text', () => {
   expect(postValue).toBeInTheDocument()
   expect(postValue).toHaveTextContent('This is what is on my mind and a post value')
 });
+
+test('renders the like and comment spans', () => {
+  render(<Post post={post} />)
+
+  const likeElement = screen.getByTestId('post-likes')
+  const commentElement = screen.getByTestId('post-comments')
+  
+  expect(likeElement).toBeInTheDocument()
+  expect(commentElement).toBeInTheDocument()
+
+  expect(likeElement).toHaveTextContent('0 Likes')
+  expect(commentElement).toHaveTextContent('0 Comments')
+});
