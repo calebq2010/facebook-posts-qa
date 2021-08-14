@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Post } from "../features/posts/post"
+import { Post } from "./post"
 
 const post = "This is what is on my mind and a post value"
 
