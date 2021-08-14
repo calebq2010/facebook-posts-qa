@@ -2,6 +2,7 @@ import './App.css'
 import { MainPostSection } from '../features/posts/MainPostSection';
 import { useSelector, useDispatch } from 'react-redux';
 import { PostsState } from '../features/posts/postsReducer';
+import { addPost } from '../features/posts/actionsSlice'
 
 function App() {
   const posts = useSelector<PostsState, PostsState["posts"]>(
@@ -11,7 +12,7 @@ function App() {
   const dispatch = useDispatch()
 
   const onAddPost = (post: string) => {
-    dispatch({ type: "ADD_POST", payload: post })
+    dispatch(addPost(post))
   }
 
   return (
