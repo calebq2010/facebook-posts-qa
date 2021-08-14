@@ -36,12 +36,14 @@ export const ProfileName = styled.div`
 `
 
 export const Location = styled.div`
+    display:flex;
     color: #5286F2;
     font-size: 12px;
 `
 
 export const UserLocation = styled.div`
     margin-left: 5px;
+    font-size: 10px;
     font-weight: bold;
 `
 
