@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import {  PostsList } from './ListOfPosts-styling'
+import { PostsList } from './ListOfPosts-styling'
+import { Post } from './post'
 
 
 type ListOfPostsProps = {
@@ -8,17 +9,11 @@ type ListOfPostsProps = {
 
 export const ListOfPosts:FC<ListOfPostsProps> = ({ posts }: ListOfPostsProps) => {
 
-  const finishedPosts = posts.map((post) => {
-    
-  })
+  const finishedPosts = posts.map((post, index) => (
+    <Post key={index} post={post} />
+  ))
 
   return (
-    <PostsList data-testid='post-list'> 
-      <ul>
-        {posts.map((post) => {
-          return <li key={post}>{post}</li>
-        })}
-      </ul>
-    </PostsList>
+    <PostsList data-testid='post-list'>{finishedPosts}</PostsList>
   )
 }

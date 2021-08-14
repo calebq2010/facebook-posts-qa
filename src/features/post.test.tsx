@@ -10,3 +10,36 @@ test('renders post list', () => {
   
   expect(postItem).toBeInTheDocument()
 });
+
+test('renders users display information', () => {
+  render(<Post post={post} />)
+
+  const userDisplayInfo = screen.getByTestId('user-display-info')
+  
+  expect(userDisplayInfo).toBeInTheDocument()
+});
+
+test('renders profile picture', () => {
+  render(<Post post={post} />)
+
+  const profilePicture = screen.getByTestId('post-profile-picture')
+  
+  expect(profilePicture).toBeInTheDocument()
+});
+
+test('renders profile section', () => {
+  render(<Post post={post} />)
+
+  const profileSection = screen.getByTestId('profile-area')
+  
+  expect(profileSection).toBeInTheDocument()
+});
+
+test('renders profile user name', () => {
+  render(<Post post={post} />)
+
+  const profileUserName = screen.getByTestId('user-name')
+  
+  expect(profileUserName).toBeInTheDocument()
+  expect(profileUserName).toHaveTextContent('Caleb Quinn')
+});

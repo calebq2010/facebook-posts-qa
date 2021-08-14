@@ -10,3 +10,4 @@ test('renders post list', () => {
   
   expect(postList).toBeInTheDocument()
 });
+
