@@ -75,13 +75,18 @@ export const LikeButton = styled.div`
     color: #888;
     cursor: pointer;
     margin-right: 20px;
+    user-select: none;
     >svg{
         margin-right: 5px;
+    }
+    &.liked{
+        color: #6792f3; 
     }
 `
 export const CommentButton = styled.div`
     font-size: 12px;
     color: #888;
+    user-select: none;
     cursor: pointer;
     >svg{
         margin-right: 5px;

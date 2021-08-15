@@ -3,13 +3,18 @@ import { Content, DotDivider, LikeCommentInfo, Location, PostItem, Profile, Prof
 import profilePicture from '../../photos/caleb_quinn.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCommentDots, faHeart, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { IPost } from './postsReducer'
+import { useDispatch } from 'react-redux'
+import { likePost } from './actionsSlice'
 
 type PostProps = {
-  post: string
+  post: IPost
 }
 
-export const Post:FC<PostProps> = ({ post }: PostProps) => {
 
+
+export const Post:FC<PostProps> = ({ post }: PostProps) => {
+    const dispatch = useDispatch();
   return (
     <PostItem data-testid='post'>
         <UserDisplayInfo data-testid='user-display-info'>
@@ -24,16 +29,15 @@ export const Post:FC<PostProps> = ({ post }: PostProps) => {
                     <Time data-testid='posted-time'>1 minute ago</Time>
                 </Profile>
             </ProfileSection>
-            <Content data-testid='post-value'>{post}</Content>
+            <Content data-testid='post-value'>{post.text}</Content>
             <LikeCommentInfo>
-                <span data-testid='post-likes'>0 Likes</span>
+                <span data-testid='post-likes'>{post.likes} Likes</span>
                     <DotDivider>&#183;</DotDivider>
                 <span data-testid='post-comments'>0 Comments</span>
             </LikeCommentInfo>
-            
         </UserDisplayInfo>
         <LikeCommentSection data-testid='like-comment-section'>
-            <LikeButton data-testid='like-btn'>
+            <LikeButton data-testid='like-btn' onClick={() => dispatch(likePost(post.id))} className={`${post.likes && 'liked'}`}>
                 <FontAwesomeIcon icon={faHeart}/>
                 Like
             </LikeButton>
