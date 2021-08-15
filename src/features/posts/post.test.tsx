@@ -100,3 +100,27 @@ test('renders the like and comment spans', () => {
   expect(likeElement).toHaveTextContent('0 Likes')
   expect(commentElement).toHaveTextContent('0 Comments')
 });
+
+test('renders the like comment section', () => {
+  render(<Post post={post} />)
+
+  const likeCommentSection = screen.getByTestId('like-comment-section')
+  
+  expect(likeCommentSection).toBeInTheDocument()
+});
+
+test('renders the like button', () => {
+  render(<Post post={post} />)
+
+  const likeBtn = screen.getByTestId('like-btn')
+  
+  expect(likeBtn).toBeInTheDocument()
+});
+
+test('renders the comment button', () => {
+  render(<Post post={post} />)
+
+  const commentBtn = screen.getByTestId('comment-btn')
+  
+  expect(commentBtn).toBeInTheDocument()
+});

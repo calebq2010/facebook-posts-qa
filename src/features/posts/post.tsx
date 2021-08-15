@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import { Content, DotDivider, LikeCommentSection, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation } from './post-styling'
+import { Content, DotDivider, LikeCommentInfo, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation, LikeCommentSection, LikeButton, CommentButton } from './post-styling'
 import profilePicture from '../../photos/caleb_quinn.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import {  faCommentDots, faHeart, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 type PostProps = {
   post: string
@@ -25,12 +25,23 @@ export const Post:FC<PostProps> = ({ post }: PostProps) => {
                 </Profile>
             </ProfileSection>
             <Content data-testid='post-value'>{post}</Content>
-            <LikeCommentSection>
+            <LikeCommentInfo>
                 <span data-testid='post-likes'>0 Likes</span>
                     <DotDivider>&#183;</DotDivider>
                 <span data-testid='post-comments'>0 Comments</span>
-            </LikeCommentSection>
+            </LikeCommentInfo>
+            
         </UserDisplayInfo>
+        <LikeCommentSection data-testid='like-comment-section'>
+            <LikeButton data-testid='like-btn'>
+                <FontAwesomeIcon icon={faHeart}/>
+                Like
+            </LikeButton>
+            <CommentButton data-testid='comment-btn'>
+                <FontAwesomeIcon icon={faCommentDots}/>
+                Comment
+            </CommentButton>
+        </LikeCommentSection>
     </PostItem>
   )
 }

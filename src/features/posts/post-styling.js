@@ -57,9 +57,35 @@ export const Content = styled.p`
     font-size: 15px;
 `
 
-export const LikeCommentSection = styled.div`
+export const LikeCommentInfo = styled.div`
     color: #979AA8;
     font-size: 12px;
+`
+
+export const LikeCommentSection = styled.div`
+    background: #eee;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    
+`
+export const LikeButton = styled.div`
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    margin-right: 20px;
+    >svg{
+        margin-right: 5px;
+    }
+`
+export const CommentButton = styled.div`
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    >svg{
+        margin-right: 5px;
+    }
 `
 
 export const DotDivider = styled.span`
