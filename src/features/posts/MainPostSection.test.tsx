@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MainPostSection } from "./MainPostSection"
-
-const addPostStub = () => { "" }
+import { store } from '../../app/store';
+import { Provider } from 'react-redux';
 
 test('renders main section header', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const mainPostSection = screen.getByTestId('main-post-section')
   
@@ -13,7 +13,7 @@ test('renders main section header', () => {
 });
 
 test('renders profile picture', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const profilePicture = screen.getByTestId('profile-picture')
   
@@ -21,7 +21,7 @@ test('renders profile picture', () => {
 });
 
 test('renders the text input box', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const textInput = screen.getByTestId('text-input')
   
@@ -29,7 +29,7 @@ test('renders the text input box', () => {
 });
 
 test('renders the divider', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const sectionDivider = screen.getByTestId('divider')
   
@@ -37,7 +37,7 @@ test('renders the divider', () => {
 });
 
 test('renders the post button section', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const postButtonSection = screen.getByTestId('post-btn-section')
   
@@ -45,7 +45,7 @@ test('renders the post button section', () => {
 });
 
 test('renders the post button', () => {
-  render(<MainPostSection addPost={addPostStub} />)
+  render(<Provider store={store}><MainPostSection /></Provider>)
 
   const postButton = screen.getByTestId('post-btn')
   

@@ -1,22 +1,20 @@
-import React, { useState, FC } from 'react'
+import React, { useState } from 'react'
 import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm, PostItButton, PostItSection, SectionDivider } from './MainPostSection-styling'
 import profilePicture from '../../photos/caleb_quinn.png'
+import { useDispatch } from 'react-redux'
+import { addPost } from './actionsSlice'
 
-type MainPostProps = {
-  addPost: (text: string) => Record<string, never> | void,
-}
 
-export const MainPostSection:FC<MainPostProps> = ({ addPost }: MainPostProps) => {
+export const MainPostSection = (): JSX.Element => {
   const [textValue, setTextValue] = useState("")
+  const dispatch = useDispatch()
 
   const textChangedEvent = (event: React.ChangeEvent<HTMLInputElement>) => setTextValue(event.target.value)
   const onEnterKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {event.key === 'Enter' && event.preventDefault()}
 
   const onPostItClick = () => {
-    if(textValue){
-      addPost(textValue)
-      setTextValue("")
-    }
+    dispatch(addPost(textValue))
+    setTextValue("")
   }
 
   return (
