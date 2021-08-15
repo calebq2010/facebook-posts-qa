@@ -2,16 +2,17 @@ import React from 'react';
 import { FC } from 'react'
 import { PostsList } from './ListOfPosts-styling'
 import { Post } from './post'
+import { IPost } from './postsReducer';
 
 
 type ListOfPostsProps = {
-  posts: string[]
+  posts: IPost[]
 }
 
 export const ListOfPosts:FC<ListOfPostsProps> = ({ posts }: ListOfPostsProps) => {
 
-  const finishedPosts = posts.map((post, index) => (
-    <Post key={index} post={post} />
+  const finishedPosts = posts.map((post) => (
+    <Post key={post.id} post={post} />
   ))
 
   return (

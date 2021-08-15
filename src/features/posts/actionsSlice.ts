@@ -1,6 +1,11 @@
-export type Action = { type: "ADD_POST"; payload: string }
+import { Action } from "./postsReducer"
 
-export const addPost = (post: string): Action => ({
+export const addPost = (postText: string): Action => ({
   type: "ADD_POST",
-  payload: post
+  payload: postText
+})
+
+export const likePost = (postId: number): Action => ({
+  type: "LIKE_POST",
+  payload: postId
 })

@@ -1,11 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Post } from "./post"
+import { Provider } from 'react-redux';
+import { store } from '../../app/store';
 
-const post = "This is what is on my mind and a post value"
+const post = {id: 1, text: "This is what is on my mind and a post value", likes: 1}
 
 test('renders post list', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
 
   const postItem = screen.getByTestId('post')
   
@@ -13,7 +15,8 @@ test('renders post list', () => {
 });
 
 test('renders users display information', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const userDisplayInfo = screen.getByTestId('user-display-info')
   
@@ -21,7 +24,8 @@ test('renders users display information', () => {
 });
 
 test('renders profile picture', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const profilePicture = screen.getByTestId('post-profile-picture')
   
@@ -29,7 +33,8 @@ test('renders profile picture', () => {
 });
 
 test('renders profile section', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const profileSection = screen.getByTestId('profile-area')
   
@@ -37,7 +42,8 @@ test('renders profile section', () => {
 });
 
 test('renders profile user name', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const profileUserName = screen.getByTestId('user-name')
   
@@ -46,7 +52,8 @@ test('renders profile user name', () => {
 });
 
 test('renders location section', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const locationSection = screen.getByTestId('location-section')
   
@@ -54,7 +61,8 @@ test('renders location section', () => {
 });
 
 test('renders map marker icon', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const mapMarker = screen.getByTestId('map-marker')
   
@@ -62,7 +70,8 @@ test('renders map marker icon', () => {
 });
 
 test('renders the users location', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const userLocation = screen.getByTestId('user-location')
   
@@ -71,7 +80,8 @@ test('renders the users location', () => {
 });
 
 test('renders the post time', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const postedTime = screen.getByTestId('posted-time')
   
@@ -80,7 +90,8 @@ test('renders the post time', () => {
 });
 
 test('renders the post text', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const postValue = screen.getByTestId('post-value')
   
@@ -89,7 +100,8 @@ test('renders the post text', () => {
 });
 
 test('renders the like and comment spans', () => {
-  render(<Post post={post} />)
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
 
   const likeElement = screen.getByTestId('post-likes')
   const commentElement = screen.getByTestId('post-comments')
@@ -97,6 +109,33 @@ test('renders the like and comment spans', () => {
   expect(likeElement).toBeInTheDocument()
   expect(commentElement).toBeInTheDocument()
 
-  expect(likeElement).toHaveTextContent('0 Likes')
+  // expect(likeElement).toHaveTextContent('0 Likes')
   expect(commentElement).toHaveTextContent('0 Comments')
+});
+
+test('renders the like comment section', () => {
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
+
+  const likeCommentSection = screen.getByTestId('like-comment-section')
+  
+  expect(likeCommentSection).toBeInTheDocument()
+});
+
+test('renders the like button', () => {
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
+
+  const likeBtn = screen.getByTestId('like-btn')
+  
+  expect(likeBtn).toBeInTheDocument()
+});
+
+test('renders the comment button', () => {
+  render(<Provider store={store}><Post post={post} /></Provider>)
+
+
+  const commentBtn = screen.getByTestId('comment-btn')
+  
+  expect(commentBtn).toBeInTheDocument()
 });
