@@ -50,7 +50,10 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
+    "chromedriver": "^92.0.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.24.0",
+    "geckodriver": "^2.0.2",
+    "nightwatch": "^1.7.8"
   }
 }

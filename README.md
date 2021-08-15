@@ -28,6 +28,16 @@ I decided to go with React Testing Library to test all my components, it builds 
 
 If you would like to run tests locally it is as easy as running `npm test` in your terminal from the root of the application directory
 
+# NightWatch.js
+
+With having expirence in automation development and QA, I thought it would be fun to spend some time looking into a fully javescript based automation development tool that could help with testing. I found a end-to-end testing framework called `NightWatch` that powered by Node.js and uses W3C WebDrive which was formerly Selenium.
+
+`NightWatch` Repo: https://github.com/nightwatchjs/nightwatch
+
+### How To Run The Tests
+
+
+
 # Packages Used In This Project
 
 - React-Redux:  https://react-redux.js.org/
