@@ -13,6 +13,7 @@ const initialState = {
   posts: []
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Action = { type: string; payload: any  }
 
 export const postsReducer = (
