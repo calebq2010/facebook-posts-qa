@@ -48,6 +48,8 @@ There currently is a `tests` directory in the root of the application that holds
 
 ## How To Run The Tests
 
+- Confirm that your server is running locally for the app first!!!!! `npm start` if not. This is temporary until I have this hosted!
+
 - From the root of the facebook app if you run `npx nightwatch`
 
 - It should spin up chrome and run through the tests in total of 8 assertions
