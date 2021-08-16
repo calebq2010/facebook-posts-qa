@@ -13,8 +13,10 @@ export const MainPostSection = (): JSX.Element => {
   const onEnterKeyPressed = (event: React.KeyboardEvent<HTMLInputElement>) => {event.key === 'Enter' && event.preventDefault()}
 
   const onPostItClick = () => {
-    dispatch(addPost(textValue))
-    setTextValue("")
+    if(textValue){
+      dispatch(addPost(textValue))
+      setTextValue("")
+    }
   }
 
   return (
