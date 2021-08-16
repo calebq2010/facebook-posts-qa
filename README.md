@@ -2,6 +2,12 @@
 
 This project is a simple replica of Facebooks posting, built in React Typescript and backed with RTL(React Testing Library) for component tests!
 
+### Current Features:
+
+- A user is able to type in the `What is on your mind?` input and hit the post it button to create a post
+
+- A user is able to hit the `Like` button and it will like/unlike the post
+
 # Hosting
 
 This project is hosted using Amazons Amplify technology. It is a fast and simple way of hosting where all I must do is point it to the gitlab repository and it builds and hosts it for me, the URL to the site is below and also more information is linked below on Amplify:
