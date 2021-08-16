@@ -10,7 +10,7 @@ This project is a simple replica of Facebooks posting, built in React Typescript
 
 # Hosting
 
-This project is hosted using Amazons Amplify technology. It is a fast and simple way of hosting where all I must do is point it to the gitlab repository and it builds and hosts it for me, the URL to the site is below and also more information is linked below on Amplify:
+This project is hosted using Amazons Amplify technology:
 
 - Site: https://main.d6jhflam20qmo.amplifyapp.com/
 
@@ -30,19 +30,35 @@ This project is hosted using Amazons Amplify technology. It is a fast and simple
 
 I Added CI/CD that has two different build steps which are documented below. This will run on commits to a branch and as well as merging into main:
 
-- `Build`: Runs a build job of the application to confirm that the app can build for production correctly
+- **Build**: Runs a build job of the application to confirm that the app can build for production correctly
 
-- `Test`: Runs both a `lint-test-job` and `unit-test-job` step
-  - `lint-test-job`: using `eslint` 
-  - `unit-test-job`: react testing library component tests
+- **Test**: Runs both a **lint-test-job** and **unit-test-job** step
+  - **lint-test-job**: using **eslint** 
+  - **unit-test-job**: react testing library component tests
 
-# Testing Information
+# How to Run the Tests
+
+### prerequisites
+
+- Confirm that you are on latest chrome version which is version 92
+
+- If you need to update:
+    - `brew update`
+    - `brew upgrade chromedriver`
+
+## Run NightWatch Tests
+
+- Run NightWatch tests From the root of the Facebook app by running `npx nightwatch`
+
+- It should spin up chrome and run through the tests in total of 10 assertions
+
+## Testing Information
 
 I decided to go with React Testing Library to test all my components, it builds off `DOM Testing Library` more information can be found here -> https://testing-library.com/docs/react-testing-library/intro/
 
 If you would like to run tests locally it is as easy as running `npm test` in your terminal from the root of the application directory
 
-# NightWatch.js
+## NightWatch.js
 
 With having experience in automation development and QA, I thought it would be fun to spend some time looking into a fully JavaScript based automation development tool that could help with testing. I found an end-to-end testing framework called `NightWatch.js` that is powered by Node.js and uses W3C WebDrive which was formerly Selenium.
 
@@ -59,12 +75,6 @@ Currently Nightwatch.js supports the following browsers for e2e testing:
 ## High Level Overview
 
 There currently is a `tests` directory in the root of the application that holds the test file that Nightwatch.js loads from the configuration file.
-
-## How to Run the Tests
-
-- From the root of the Facebook app if you run `npx nightwatch`
-
-- It should spin up chrome and run through the tests in total of 10 assertions
 
 # Packages Used in This Project
 
