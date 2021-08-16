@@ -3,7 +3,7 @@ describe('facebook post tests', function() {
     const mainPostElement = 'section[data-testid="main-post-section"]'
 
     before(browser => 
-        browser.url('http://localhost:3000')
+        browser.url('https://main.d6jhflam20qmo.amplifyapp.com/')
     );
   
     test('Confirm the main post element renders', function (browser) {

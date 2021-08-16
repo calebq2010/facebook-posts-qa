@@ -2,7 +2,21 @@
 
 This project is a simple replica of Facebooks posting, built in React Typescript and backed with RTL(React Testing Library) for component tests!
 
-# How To Get Started
+### Current Features:
+
+- A user is able to type in the `What is on your mind?` input and hit the post it button to create a post
+
+- A user is able to hit the `Like` button and it will like/unlike the post
+
+# Hosting
+
+This project is hosted using Amazons Amplify technology. It is a fast and simple way of hosting where all I must do is point it to the gitlab repository and it builds and hosts it for me, the URL to the site is below and also more information is linked below on Amplify:
+
+- Site: https://main.d6jhflam20qmo.amplifyapp.com/
+
+- Amazon Amplify: https://aws.amazon.com/amplify/
+
+# How to Get Started Locally
 
 - Clone the repo locally
 
@@ -30,7 +44,7 @@ If you would like to run tests locally it is as easy as running `npm test` in yo
 
 # NightWatch.js
 
-With having expirence in automation development and QA, I thought it would be fun to spend some time looking into a fully javescript based automation development tool that could help with testing. I found a end-to-end testing framework called `NightWatch` that is powered by Node.js and uses W3C WebDrive which was formerly Selenium.
+With having experience in automation development and QA, I thought it would be fun to spend some time looking into a fully JavaScript based automation development tool that could help with testing. I found an end-to-end testing framework called `NightWatch.js` that is powered by Node.js and uses W3C WebDrive which was formerly Selenium.
 
 `NightWatch` Repo: https://github.com/nightwatchjs/nightwatch
 
@@ -46,15 +60,13 @@ Currently Nightwatch.js supports the following browsers for e2e testing:
 
 There currently is a `tests` directory in the root of the application that holds the test file that Nightwatch.js loads from the configuration file.
 
-## How To Run The Tests
+## How to Run the Tests
 
-- Confirm that your server is running locally for the app first!!!!! `npm start` if not. This is temporary until I have this hosted!
+- From the root of the Facebook app if you run `npx nightwatch`
 
-- From the root of the facebook app if you run `npx nightwatch`
+- It should spin up chrome and run through the tests in total of 10 assertions
 
-- It should spin up chrome and run through the tests in total of 8 assertions
-
-# Packages Used In This Project
+# Packages Used in This Project
 
 - React-Redux:  https://react-redux.js.org/
 
@@ -62,3 +74,14 @@ There currently is a `tests` directory in the root of the application that holds
 
 - Font awesome: https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
 
+# Other Production Considerations
+
+There are a few things that I would do if I was to have this code in production and those thoughts are below:
+
+1. I would of course implement the comment feature (currently the app does not have the capability).
+
+2. I would implement instead of just using in memory with redux store, an actual database backend (mongoDB or DynamoDB)
+
+3. Nightwatch.js does provide the idea of page object pattern which I feel if I were to take this to production would be the best pattern to follow with E2E testing.
+
+4. I would setup another CI/CD pipeline that runs the E2E tests as well on each commit / merge to main (for sake of time I did not set this up)
