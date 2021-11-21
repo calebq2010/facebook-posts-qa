@@ -1,20 +1,30 @@
-# FaceBook Posts
+# FaceBook Posts QA Engineer Take Home Project
 
-This project is a simple replica of Facebooks posting, built in React Typescript and backed with RTL(React Testing Library) for component tests!
+This project is a simple replica of Facebooks posting. This project has a couple intentional bugs that we will need you to Identify, document and fix. Below are some things we would like to see.
 
-### Current Features:
+### Current Bugs In Project:
 
-- A user is able to type in the `What is on your mind?` input and hit the post it button to create a post
+- The post button has a text value of `Post` and not `Post It`
 
-- A user is able to hit the `Like` button and it will like/unlike the post
+- When the user types the text into the `what is on your mind?` section the button does not show as enabled
 
-# Hosting
+- After the user types the text into the `what is on your mind?` section and hits the post it button the text is not cleared and `what is on your mind?` does not display again
 
-This project is hosted using Amazons Amplify technology:
+- The created post is shifted to the right and not center under the `what is on your mind?` section
 
-- Site: https://main.d6jhflam20qmo.amplifyapp.com/
+- When the user hits the Like button it throws an error in console `ERROR WHEN USER IS LIKING POST`
 
-- Amazon Amplify: https://aws.amazon.com/amplify/
+### Expected functionality:
+
+- There should be a button to allow users to post after typing what is on their mind and has text `Post It`
+
+- The `Post It` button should be grayed out when no value is typed in the `What is on your mind?`
+
+- A user is able to type in the `What is on your mind?` input and hit the post it button to create a post. The `Post It` button should be enabled and a dark blue color once the field has a value.
+
+- A post should be generated directly below the `What is on your mind?` area.
+
+- A user is able to hit the `Like` button on a post that was created and it will like/unlike the post. Filling in the color of heart with a blue color when liked and white when not liked.
 
 # How to Get Started Locally
 
@@ -26,72 +36,11 @@ This project is hosted using Amazons Amplify technology:
 
 - You can then navigate in your browser to `http://localhost:3000/` and the app should be running there
 
-# CI/CD
+## Testing Considerations
 
-I Added CI/CD that has two different build steps which are documented below. This will run on commits to a branch and as well as merging into main:
+- Please document a test plan on how this project should work. 
 
-- **Build**: Runs a build job of the application to confirm that the app can build for production correctly
+- Any bugs that you come across in this project please document
 
-- **Test**: Runs both a **lint-test-job** and **unit-test-job** step
-  - **lint-test-job**: using **eslint** 
-  - **unit-test-job**: react testing library component tests
+- Any bugs that are resolved in this project please document how you approached fixing the bug and what the solution was
 
-# How to Run the Tests
-
-### prerequisites
-
-- Confirm that you are on latest chrome version which is version 92
-
-- If you need to update:
-    - `brew update`
-    - `brew upgrade chromedriver`
-
-## Run NightWatch Tests
-
-- Run NightWatch tests From the root of the Facebook app by running `npx nightwatch`
-
-- It should spin up chrome and run through the tests in total of 10 assertions
-
-## Testing Information
-
-I decided to go with React Testing Library to test all my components, it builds off `DOM Testing Library` more information can be found here -> https://testing-library.com/docs/react-testing-library/intro/
-
-If you would like to run tests locally it is as easy as running `npm test` in your terminal from the root of the application directory
-
-## NightWatch.js
-
-With having experience in automation development and QA, I thought it would be fun to spend some time looking into a fully JavaScript based automation development tool that could help with testing. I found an end-to-end testing framework called `NightWatch.js` that is powered by Node.js and uses W3C WebDrive which was formerly Selenium.
-
-`NightWatch` Repo: https://github.com/nightwatchjs/nightwatch
-
-## Compatible Browsers
-
-Currently Nightwatch.js supports the following browsers for e2e testing:
-  - Chrome
-  - Edge
-  - Firefox
-  - Safari
-
-## High Level Overview
-
-There currently is a `tests` directory in the root of the application that holds the test file that Nightwatch.js loads from the configuration file.
-
-# Packages Used in This Project
-
-- React-Redux:  https://react-redux.js.org/
-
-- Styled Components: https://styled-components.com/
-
-- Font awesome: https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
-
-# Other Production Considerations
-
-There are a few things that I would do if I was to have this code in production and those thoughts are below:
-
-1. I would of course implement the comment feature (currently the app does not have the capability).
-
-2. I would implement instead of just using in memory with redux store, an actual database backend (mongoDB or DynamoDB)
-
-3. Nightwatch.js does provide the idea of page object pattern which I feel if I were to take this to production would be the best pattern to follow with E2E testing.
-
-4. I would setup another CI/CD pipeline that runs the E2E tests as well on each commit / merge to main (for sake of time I did not set this up)
