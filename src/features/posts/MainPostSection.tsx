@@ -15,7 +15,6 @@ export const MainPostSection = (): JSX.Element => {
   const onPostItClick = () => {
     if(textValue){
       dispatch(addPost(textValue))
-      setTextValue("")
     }
   }
 
