@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { MainProfilePicture, MainPostInput, MainInputSection, MainSection, MainForm, PostItButton, PostItSection, SectionDivider } from './MainPostSection-styling'
-import profilePicture from '../../photos/caleb_quinn.png'
+import profilePicture from '../../photos/efuse.png'
 import { useDispatch } from 'react-redux'
 import { addPost } from './actionsSlice'
 
