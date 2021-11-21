@@ -36,7 +36,7 @@ export const MainPostSection = (): JSX.Element => {
         </MainInputSection>
         <SectionDivider data-testid='divider'></SectionDivider>
         <PostItSection data-testid='post-btn-section'>
-          <PostItButton data-testid='post-btn' type='button' onClick={ onPostItClick }>Post It</PostItButton>
+          <PostItButton data-testid='post-btn' type='button' onClick={ onPostItClick }>Post</PostItButton>
         </PostItSection>
       </MainForm>
     </MainSection>
