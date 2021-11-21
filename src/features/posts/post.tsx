@@ -37,7 +37,7 @@ export const Post:FC<PostProps> = ({ post }: PostProps) => {
             </LikeCommentInfo>
         </UserDisplayInfo>
         <LikeCommentSection data-testid='like-comment-section'>
-            <LikeButton data-testid='like-btn' onClick={() => dispatch(likePost(post.id))} className={`${post.likes && 'liked'}`}>
+            <LikeButton data-testid='like-btn' onClick={() => dispatch(likePost(123))} className={`${post.likes && 'liked'}`}>
                 <FontAwesomeIcon icon={faHeart}/>
                 Like
             </LikeButton>

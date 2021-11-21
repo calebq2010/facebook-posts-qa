@@ -37,6 +37,9 @@ export const postsReducer = (
       if(post)
         if(post.likes === 0) post.likes++;
         else post.likes--;
+      else{
+        throw "ERROR WHEN USER IS LIKING POST"
+      }
       
       return {...state, posts: [...state.posts]}
 
