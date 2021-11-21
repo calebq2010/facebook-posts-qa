@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Content, DotDivider, LikeCommentInfo, Location, PostItem, Profile, ProfileName, ProfilePicture, UserDisplayInfo, ProfileSection, Time, UserLocation, LikeCommentSection, LikeButton, CommentButton } from './post-styling'
-import profilePicture from '../../photos/caleb_quinn.png'
+import profilePicture from '../../photos/efuse.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCommentDots, faHeart, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { IPost } from './postsReducer'
