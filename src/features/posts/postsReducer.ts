@@ -35,7 +35,7 @@ export const postsReducer = (
     case "LIKE_POST":
       post = state.posts.find(post => post.id === action.payload);
       if(post)
-        if(post.likes === 0) post.likes++;
+        if(post.likes >= 0) post.likes++;
         else post.likes--;
       else{
         throw "ERROR WHEN USER IS LIKING POST"
