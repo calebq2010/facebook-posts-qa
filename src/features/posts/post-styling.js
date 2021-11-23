@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const PostItem = styled.section`
-    margin-top: 12.5px;
     background: #ffffff;
     border-radius: 8px;
 `
