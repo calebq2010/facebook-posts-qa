@@ -78,7 +78,7 @@ export const LikeButton = styled.div`
         margin-right: 5px;
     }
     &.liked{
-        color: #6792f3; 
+        color: aquamarine; 
     }
 `
 export const CommentButton = styled.div`
