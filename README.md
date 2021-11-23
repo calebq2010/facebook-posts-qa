@@ -2,7 +2,33 @@
 
 This project is a simple replica of Facebooks posting. This project has a couple intentional bugs that we will need you to Identify, document and fix. Below are some things we would like to see.
 
-### Current Bugs In Project:
+## How to Get Started Locally
+
+- Clone the repo locally
+
+- from the root of the directory run `npm install`
+
+- After that completes run `npm start` 
+
+- You can then navigate in your browser to `http://localhost:3000/` and the app should be running there
+
+## Example Design
+
+![Alt text](src/photos/image.png?raw=true "Title")
+
+## Project Tasks
+
+- Resolve all known bugs listed below.
+
+- Please document a test plan on how this project should work. 
+
+- Any bugs that you come across in this project please document.
+
+- Any bugs that are resolved in this project please document how you approached fixing the bug and what the solution was.
+
+**Bonus Points**: Resolve any other bugs that you find!
+
+### Known Bugs In Project:
 
 - The post button has a text value of `Post` and not `Post It`
 
@@ -16,6 +42,8 @@ This project is a simple replica of Facebooks posting. This project has a couple
 
 ### Expected functionality:
 
+- The designs match the provided mockup
+
 - There should be a button to allow users to post after typing what is on their mind and has text `Post It`
 
 - The `Post It` button should be grayed out when no value is typed in the `What is on your mind?`
@@ -26,21 +54,6 @@ This project is a simple replica of Facebooks posting. This project has a couple
 
 - A user is able to hit the `Like` button on a post that was created and it will like/unlike the post. Filling in the color of heart with a blue color when liked and white when not liked.
 
-# How to Get Started Locally
 
-- Clone the repo locally
-
-- from the root of the directory run `npm install`
-
-- After that completes run `npm start` 
-
-- You can then navigate in your browser to `http://localhost:3000/` and the app should be running there
-
-## Testing Considerations
-
-- Please document a test plan on how this project should work. 
-
-- Any bugs that you come across in this project please document
-
-- Any bugs that are resolved in this project please document how you approached fixing the bug and what the solution was
-
+## Notes with Pavel
+- change colors of shit too
