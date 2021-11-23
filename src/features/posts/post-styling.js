@@ -26,13 +26,12 @@ export const Profile = styled.div`
 
 export const ProfilePicture = styled.img`
     width: 50px;
-    border-radius: 50%;
 `
 
 export const ProfileName = styled.div`
     color: #4E4E5B;
     font-weight: bold; 
-    font-size: 15px;
+    font-size: 7px;
 `
 
 export const Location = styled.div`
@@ -48,7 +47,7 @@ export const UserLocation = styled.div`
 `
 
 export const Time = styled.span`
-    font-size: 10px;
+    font-size: 25px;
     color: #8494AB;
 `
 

@@ -21,7 +21,7 @@ export const Post:FC<PostProps> = ({ post }: PostProps) => {
             <ProfileSection>
                 <ProfilePicture data-testid='post-profile-picture' src={profilePicture}></ProfilePicture>
                 <Profile data-testid='profile-area'>
-                    <ProfileName data-testid='user-name'>Caleb Quinn</ProfileName>
+                    <ProfileName data-testid='user-name'>Efuse User</ProfileName>
                     <Location data-testid='location-section'>
                         <FontAwesomeIcon data-testid='map-marker' icon={faMapMarkerAlt} />
                         <UserLocation data-testid='user-location'>OH, USA</UserLocation>

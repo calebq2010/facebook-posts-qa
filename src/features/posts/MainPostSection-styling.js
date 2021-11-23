@@ -27,7 +27,7 @@ export const MainPostInput = styled.input`
   border: none;
   margin-left: 10px;
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 40px;
   &:focus {
       outline: none;
     }
